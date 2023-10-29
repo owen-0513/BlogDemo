@@ -42,10 +42,10 @@
     <div class="ui container">
       <div class="ui success large message">
         <h3>Hi,</h3>
-        <p th:if="${user != null}" th:text="'帳號: ' + ${user.username}"></p>
+        <p th:if="${username != null and username != ''}" th:text="'帳號: ' + ${username}"></p>
       </div>
 
-      <img src="https://unsplash.it/1000/400?image=1006" alt="" class="ui rounded bordered fluid image">
+      <img src="https://unsplash.it/1000/400?image=1000" alt="" class="ui rounded bordered fluid image">
     </div>
   </div>
 

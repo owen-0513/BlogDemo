@@ -35,13 +35,14 @@
                  <input type="password" name="password" placeholder="密碼">
                </div>
              </div>
-             <button class="ui fluid large teal submit button">登入</button>
+             <button class="ui tiny button" style="background: linear-gradient(to right, #0072e3, #00c6a7); color: #fff;">登入</button>
            </div>
 
            <div class="ui error mini message"></div>
            <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">帳號或是密碼打錯了喔~</div>
            <!-- 添加註冊超連結 -->
-           <a href="/register">註冊新帳號</a>
+           <a href="/register" class="ui tiny button" style="background: linear-gradient(to right, #ff3366, #ff9933); color: #fff;">如果沒有帳號密碼走這</a>
+           <!--           <a href="/register">註冊新帳號</a>-->
          </form>
 
        </div>
@@ -61,14 +62,14 @@
         identifier: 'username',
         rules: [{
           type : 'empty',
-          prompt: '請輸入帳號'
+          prompt: '小子你是不是忘記輸入帳號了'
         }]
       },
       password : {
         identifier: 'password',
         rules: [{
           type : 'empty',
-          prompt: '請輸入密碼'
+          prompt: '小子你還敢忘記輸入密碼阿'
         }]
       }
     }

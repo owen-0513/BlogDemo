@@ -43,7 +43,7 @@ public class LoginController {
             session.setAttribute("user",user);
             return "admin/index";
         } else {
-            attributes.addFlashAttribute("message", "帳號密碼錯誤");
+            attributes.addFlashAttribute("message", "你的帳號或是密碼錯了 請你再多想想 可以吃個魚油增加記憶力");
             return "redirect:/admin";
         }
     }
