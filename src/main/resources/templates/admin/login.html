@@ -21,7 +21,7 @@
              後台登入頁面
            </div>
          </h2>
-         <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
+         <form class="ui large form" method="post" action="admin/login" th:action="@{/admin/login}">
            <div class="ui  segment">
              <div class="field">
                <div class="ui left icon input">
@@ -41,7 +41,7 @@
            <div class="ui error mini message"></div>
            <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">帳號或是密碼打錯了喔~</div>
            <!-- 添加註冊超連結 -->
-           <a href="/admin/register">註冊新帳號</a>
+           <a href="/register">註冊新帳號</a>
          </form>
 
        </div>

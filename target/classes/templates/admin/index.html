@@ -42,7 +42,7 @@
     <div class="ui container">
       <div class="ui success large message">
         <h3>Hi,</h3>
-        <p>Owen,歡迎登入</p>
+        <p th:if="${user != null}" th:text="'帳號: ' + ${user.username}"></p>
       </div>
 
       <img src="https://unsplash.it/1000/400?image=1006" alt="" class="ui rounded bordered fluid image">

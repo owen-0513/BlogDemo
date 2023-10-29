@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
+import org.springframework.ui.Model;
 
 /**
  * Created by owen on 2023/10/25.
@@ -23,11 +24,13 @@ public class LoginController {
     private UserService userService;
 
     @GetMapping
-    public String loginPage() {
+    public String loginPage(HttpSession session, Model model) {
+        if (session.getAttribute("user") != null) {
+            User user = (User) session.getAttribute("user");
+            model.addAttribute("username", user.getUsername());
+        }
         return "admin/login";
     }
-
-
 
     @PostMapping("/login")
     public String login(@RequestParam String username,

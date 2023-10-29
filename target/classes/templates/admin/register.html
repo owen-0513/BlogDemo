@@ -21,8 +21,8 @@
                         註冊新帳號
                     </div>
                 </h2>
-                <form class="ui large form" method="post" action="/admin/register" th:action="@{/admin/register}">
-                    <div class="ui  segment">
+                <form class="ui large form" method="post" action="/register" th:action="@{/register}">
+                <div class="ui  segment">
                         <div class="field">
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="ui error mini message"></div>
-                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">帳號或是密碼打錯了喔~</div>
+                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">西勒哈囉有人註冊過了拉~</div>
 
                 </form>
 
