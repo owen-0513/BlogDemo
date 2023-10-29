@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Created by limi on 2017/10/16.
+ * Created by Owen on 2023/10/26.
  */
 @Repository
 public interface TagRepository extends JpaRepository<Tag,Long> {
